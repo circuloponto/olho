@@ -1,0 +1,139 @@
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 50%, #feca57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-section {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+.section-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.section-content h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-content p {
+  color: #a0a0a0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.section-video {
+  margin-top: 1.5rem;
+}
+
+.section-video video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-default {
+  margin-top: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.about-card {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(233, 69, 96, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(233, 69, 96, 0.5);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-card h3 {
+  color: #e94560;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.about-card p {
+  color: #a0a0a0;
+  line-height: 1.7;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(233, 69, 96, 0.2);
+  border-top-color: #e94560;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+}

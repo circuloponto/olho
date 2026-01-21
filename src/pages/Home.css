@@ -1,0 +1,229 @@
+.home {
+  min-height: calc(100vh - 80px);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  margin: 0;
+  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 50%, #feca57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 0.5rem 0 2rem;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 30px rgba(233, 69, 96, 0.6);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e0e0e0;
+  border: 2px solid #e94560;
+}
+
+.btn-secondary:hover {
+  background: rgba(233, 69, 96, 0.1);
+  transform: translateY(-3px);
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye-animation {
+  position: relative;
+}
+
+.eye-outer {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 0 60px rgba(233, 69, 96, 0.3),
+    inset 0 0 60px rgba(233, 69, 96, 0.1);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.eye-inner {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotate 10s linear infinite;
+}
+
+.eye-pupil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #0f0f1a;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 60px rgba(233, 69, 96, 0.3),
+      inset 0 0 60px rgba(233, 69, 96, 0.1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 80px rgba(233, 69, 96, 0.5),
+      inset 0 0 80px rgba(233, 69, 96, 0.2);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(233, 69, 96, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(233, 69, 96, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  color: #e94560;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.feature-card p {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 3rem;
+  }
+
+  .eye-outer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .eye-inner {
+    width: 110px;
+    height: 110px;
+  }
+
+  .eye-pupil {
+    width: 45px;
+    height: 45px;
+  }
+}
